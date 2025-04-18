@@ -93,7 +93,7 @@ const Contact = () => {
                   <Github size={20} />
                 </a>
                 <a 
-                  href="linkedin.com/in/saketh-mothe" 
+                  href="https://www.linkedin.com/in/saketh-mothe/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white rounded-full p-3 shadow-md text-gray-600 hover:text-custom-purple transition-colors"
