@@ -102,7 +102,7 @@ const Projects = () => {
 
         <div className="text-center mt-12">
           <a 
-            href="https://github.com/sakethmothe" 
+            href="https://github.com/saki1205" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="inline-flex items-center bg-custom-purple hover:bg-custom-darkPurple text-white font-medium py-3 px-6 rounded-lg transition-colors"
