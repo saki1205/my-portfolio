@@ -3,65 +3,35 @@ import React from 'react';
 
 interface SkillProps {
   name: string;
-  level: number;
   category: 'Languages' | 'Web Technologies' | 'Databases' | 'Tools';
 }
 
 const skillsData: SkillProps[] = [
-  { name: 'JavaScript', level: 90, category: 'Languages' },
-  { name: 'Python', level: 85, category: 'Languages' },
-  { name: 'C++', level: 80, category: 'Languages' },
-  { name: 'Java', level: 75, category: 'Languages' },
-  { name: 'React.js', level: 90, category: 'Web Technologies' },
-  { name: 'Node.js', level: 85, category: 'Web Technologies' },
-  { name: 'Express.js', level: 85, category: 'Web Technologies' },
-  { name: 'HTML/CSS', level: 95, category: 'Web Technologies' },
-  { name: 'Bootstrap', level: 85, category: 'Web Technologies' },
-  { name: 'Next.js', level: 75, category: 'Web Technologies' },
-  { name: 'Django', level: 70, category: 'Web Technologies' },
-  { name: 'MongoDB', level: 85, category: 'Databases' },
-  { name: 'MySQL', level: 80, category: 'Databases' },
-  { name: 'Git/GitHub', level: 90, category: 'Tools' },
+  { name: 'JavaScript', category: 'Languages' },
+  { name: 'Python', category: 'Languages' },
+  { name: 'C++', category: 'Languages' },
+  { name: 'Java', category: 'Languages' },
+  { name: 'React.js', category: 'Web Technologies' },
+  { name: 'Node.js', category: 'Web Technologies' },
+  { name: 'Express.js', category: 'Web Technologies' },
+  { name: 'HTML/CSS', category: 'Web Technologies' },
+  { name: 'Bootstrap', category: 'Web Technologies' },
+  { name: 'Next.js', category: 'Web Technologies' },
+  { name: 'Django', category: 'Web Technologies' },
+  { name: 'MongoDB', category: 'Databases' },
+  { name: 'MySQL', category: 'Databases' },
+  { name: 'Git/GitHub', category: 'Tools' },
 ];
 
-const SkillBar = ({ name, level }: { name: string; level: number }) => {
-  return (
-    <div className="mb-6">
-      <div className="flex justify-between mb-1">
-        <span className="text-sm font-medium text-gray-700">{name}</span>
-        <span className="text-sm font-medium text-custom-purple">{level}%</span>
-      </div>
-      <div className="w-full bg-gray-200 rounded-full h-2.5">
-        <div 
-          className="bg-custom-purple h-2.5 rounded-full" 
-          style={{ width: `${level}%` }}
-        ></div>
-      </div>
-    </div>
-  );
-};
-
-const SkillCard = ({ name, level }: { name: string; level: number }) => {
+const SkillCard = ({ name }: { name: string }) => {
   return (
     <div className="skill-card bg-white rounded-lg p-4 shadow-md">
-      <div className="flex justify-between items-center mb-2">
-        <h3 className="font-medium text-gray-800">{name}</h3>
-        <span className="text-xs font-semibold bg-custom-purple/10 text-custom-purple px-2 py-1 rounded-full">
-          {level}%
-        </span>
-      </div>
-      <div className="w-full bg-gray-100 rounded-full h-1.5">
-        <div 
-          className="purple-gradient h-1.5 rounded-full" 
-          style={{ width: `${level}%` }}
-        ></div>
-      </div>
+      <h3 className="font-medium text-gray-800">{name}</h3>
     </div>
   );
 };
 
 const Skills = () => {
-  // Group skills by category
   const categories = ['Languages', 'Web Technologies', 'Databases', 'Tools'] as const;
   const groupedSkills = categories.reduce((acc, category) => {
     acc[category] = skillsData.filter(skill => skill.category === category);
@@ -79,9 +49,11 @@ const Skills = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="glass-card p-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-6">Main Skills</h3>
-            {[...groupedSkills['Languages'], ...groupedSkills['Web Technologies']].slice(0, 6).map((skill, index) => (
-              <SkillBar key={index} name={skill.name} level={skill.level} />
-            ))}
+            <div className="grid grid-cols-2 gap-4">
+              {[...groupedSkills['Languages'], ...groupedSkills['Web Technologies']].slice(0, 6).map((skill, index) => (
+                <SkillCard key={index} name={skill.name} />
+              ))}
+            </div>
           </div>
 
           <div className="space-y-8">
@@ -90,7 +62,7 @@ const Skills = () => {
                 <h3 className="text-xl font-bold text-gray-800 mb-4">{category}</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {groupedSkills[category].map((skill, index) => (
-                    <SkillCard key={index} name={skill.name} level={skill.level} />
+                    <SkillCard key={index} name={skill.name} />
                   ))}
                 </div>
               </div>

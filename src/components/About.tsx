@@ -14,13 +14,13 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="glass-card p-8 animate-fade-in">
             <p className="text-lg text-gray-700 mb-6">
-              I am a <strong>B.Tech student</strong> at Keshav Memorial Institute of Technology, with a strong foundation in Python, C++, Java, and JavaScript. My passion lies in web development, particularly working with the MERN stack.
+              A B.Tech student at Keshav Memorial Institute of Technology with strong proficiency in Python, C, C++, and Java. Experienced in full-stack web development using the MERN stack (MongoDB, Express.js, React.js, Node.js) along with frontend technologies like HTML, CSS, JavaScript, Bootstrap, and jQuery.
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              With a GPA of 7.9, I'm dedicated to applying my technical skills in real-world projects. I've developed applications ranging from YouTube transcript summarizers to IoT-enabled systems, giving me a versatile skill set.
+              Familiar with backend frameworks such as Django and Express.js. Skilled in Data Structures, Algorithms, and Object-Oriented Programming.
             </p>
             <p className="text-lg text-gray-700">
-              I'm currently seeking internship or entry-level opportunities where I can contribute to innovative projects and grow as a developer. My goal is to create impactful, user-friendly applications that solve real problems.
+              Actively seeking opportunities to apply my skills in a challenging and collaborative development environment.
             </p>
           </div>
 

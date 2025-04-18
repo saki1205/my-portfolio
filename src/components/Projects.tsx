@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Github, ExternalLink, Youtube, Shield, Terminal } from 'lucide-react';
 
@@ -66,16 +65,6 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
         ))}
       </div>
       <div className="flex space-x-4 mt-auto">
-        {project.github && (
-          <a 
-            href={project.github} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-gray-600 hover:text-custom-purple transition-colors flex items-center"
-          >
-            <Github size={18} className="mr-1" /> Code
-          </a>
-        )}
         {project.link && (
           <a 
             href={project.link} 
