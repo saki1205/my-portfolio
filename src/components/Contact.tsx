@@ -85,7 +85,7 @@ const Contact = () => {
               <h4 className="font-medium text-gray-800 mb-4">Connect with me</h4>
               <div className="flex space-x-4">
                 <a 
-                  href="https://github.com/sakethmothe" 
+                  href="https://github.com/saki1205" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white rounded-full p-3 shadow-md text-gray-600 hover:text-custom-purple transition-colors"
@@ -93,7 +93,7 @@ const Contact = () => {
                   <Github size={20} />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/SakethMothe" 
+                  href="linkedin.com/in/saketh-mothe" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white rounded-full p-3 shadow-md text-gray-600 hover:text-custom-purple transition-colors"
