@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Github, ExternalLink, Youtube, Shield, Terminal } from 'lucide-react';
+import { Github, Terminal, Shield, Database } from 'lucide-react';
 
 interface ProjectProps {
   title: string;
@@ -13,12 +14,12 @@ interface ProjectProps {
 
 const projects: ProjectProps[] = [
   {
-    title: 'YouTube Transcriptor Summarizer',
-    description: 'Developed a tool to convert YouTube transcriptions into a formal language format with grammatically correct text. Used Python and Flask for text parsing and grammar correction.',
-    date: 'Nov 2023',
-    technologies: ['Python', 'Flask', 'NLP', 'Deep Learning'],
-    icon: <Youtube className="text-custom-purple" size={24} />,
-    github: 'https://github.com/sakethmothe/youtube-summarizer'
+    title: 'House Pricing',
+    description: 'Designed and deployed an intuitive Streamlit-based web application to predict house prices based on user-selected inputs such as area, locality, and amenities using Linear Regression and Random Forest models.',
+    date: 'Jan - Mar 2024',
+    technologies: ['Python', 'Streamlit', 'Pandas', 'Scikit-learn', 'ML'],
+    icon: <Database className="text-custom-purple" size={24} />,
+    github: 'https://github.com/saki1205/House-pricing'
   },
   {
     title: 'Fake Currency Detection System',
@@ -26,23 +27,22 @@ const projects: ProjectProps[] = [
     date: 'June - Oct 2024',
     technologies: ['Python', 'TensorFlow', 'OpenCV', 'ML'],
     icon: <Shield className="text-custom-purple" size={24} />,
-    github: 'https://github.com/sakethmothe/fake-currency-detector'
+    github: 'https://github.com/saki1205/Fake-Currency-Detection-System'
   },
   {
-    title: 'ATM Simulation Machine',
-    description: 'Developed a tool to simulate ATM transactions and operations using object-oriented programming concepts in C++.',
-    date: 'Aug 2023',
-    technologies: ['C++', 'OOP'],
+    title: 'Task Management System',
+    description: 'Developed a comprehensive task management system for organizing and tracking project tasks, featuring user authentication, task creation, and progress tracking capabilities.',
+    date: 'Sept 2023',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
     icon: <Terminal className="text-custom-purple" size={24} />,
-    github: 'https://github.com/sakethmothe/atm-simulation'
+    github: 'https://github.com/saki1205/task-management-system'
   },
   {
     title: 'WiFi Controlled Car Using ESP 8266',
     description: 'IoT-Enabled Control system with wireless communication to remotely operate a car using ESP 8266 microcontroller and DC motors with a web interface.',
     date: 'Aug 2023',
     technologies: ['ESP8266', 'Arduino IDE', 'IoT', 'DC Motors'],
-    icon: <Terminal className="text-custom-purple" size={24} />,
-    github: 'https://github.com/sakethmothe/wifi-controlled-car'
+    icon: <Terminal className="text-custom-purple" size={24} />
   }
 ];
 
@@ -64,18 +64,18 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
           </span>
         ))}
       </div>
-      <div className="flex space-x-4 mt-auto">
-        {project.link && (
+      {project.github && (
+        <div className="flex space-x-4 mt-auto">
           <a 
-            href={project.link} 
+            href={project.github} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-gray-600 hover:text-custom-purple transition-colors flex items-center"
+            className="inline-flex items-center text-gray-600 hover:text-custom-purple transition-colors"
           >
-            <ExternalLink size={18} className="mr-1" /> Live Demo
+            <Github size={18} className="mr-1" /> View on GitHub
           </a>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
