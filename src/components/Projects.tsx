@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Github, Terminal, Shield, Database } from 'lucide-react';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 interface ProjectProps {
   title: string;
@@ -81,13 +82,19 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
 };
 
 const Projects = () => {
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
+  
   return (
-    <section id="projects" className="py-24 bg-cream relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      id="projects" 
+      className="py-24 bg-cream relative"
+      ref={ref as React.RefObject<HTMLElement>}
+    >
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-transition ${isVisible ? 'visible' : ''}`}>
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">My Projects</h2>
-          <div className="w-20 h-1 bg-custom-purple mx-auto rounded"></div>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up">My Projects</h2>
+          <div className="w-20 h-1 bg-custom-purple mx-auto rounded animate-fade-in-up delay-100"></div>
+          <p className="text-gray-600 mt-4 max-w-2xl mx-auto animate-fade-in-up delay-200">
             Here are some of the projects I've worked on, showcasing my technical skills and problem-solving abilities.
           </p>
         </div>

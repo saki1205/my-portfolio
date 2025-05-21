@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Send, Phone, Mail, MapPin, Linkedin, Github } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -34,13 +35,19 @@ const Contact = () => {
     }, 1000);
   };
 
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
+  
   return (
-    <section id="contact" className="py-24 bg-peach relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      id="contact" 
+      className="py-24 bg-peach relative"
+      ref={ref as React.RefObject<HTMLElement>}
+    >
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-transition ${isVisible ? 'visible' : ''}`}>
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
-          <div className="w-20 h-1 bg-custom-purple mx-auto rounded"></div>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up">Get In Touch</h2>
+          <div className="w-20 h-1 bg-custom-purple mx-auto rounded animate-fade-in-up delay-100"></div>
+          <p className="text-gray-600 mt-4 max-w-2xl mx-auto animate-fade-in-up delay-200">
             Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
           </p>
         </div>

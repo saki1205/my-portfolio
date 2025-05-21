@@ -37,6 +37,7 @@ const Navbar = () => {
             <div className="ml-10 flex items-center space-x-8">
               <a href="#about" className="text-gray-700 hover:text-custom-purple transition-colors font-medium">About</a>
               <a href="#skills" className="text-gray-700 hover:text-custom-purple transition-colors font-medium">Skills</a>
+              <a href="#experience" className="text-gray-700 hover:text-custom-purple transition-colors font-medium">Experience</a>
               <a href="#projects" className="text-gray-700 hover:text-custom-purple transition-colors font-medium">Projects</a>
               <a href="#contact" className="text-gray-700 hover:text-custom-purple transition-colors font-medium">Contact</a>
               <a 
@@ -76,6 +77,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Skills
+            </a>
+            <a 
+              href="#experience" 
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-custom-purple hover:bg-gray-50"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Experience
             </a>
             <a 
               href="#projects" 

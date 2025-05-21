@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 interface SkillProps {
   name: string;
@@ -37,13 +38,19 @@ const Skills = () => {
     acc[category] = skillsData.filter(skill => skill.category === category);
     return acc;
   }, {} as Record<typeof categories[number], SkillProps[]>);
+  
+  const { ref, isVisible } = useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <section id="skills" className="py-24 bg-mint relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      id="skills" 
+      className="py-24 bg-mint relative"
+      ref={ref as React.RefObject<HTMLElement>}
+    >
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 section-transition ${isVisible ? 'visible' : ''}`}>
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technical Skills</h2>
-          <div className="w-20 h-1 bg-custom-purple mx-auto rounded"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-fade-in-up">Technical Skills</h2>
+          <div className="w-20 h-1 bg-custom-purple mx-auto rounded animate-fade-in-up delay-100"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

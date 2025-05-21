@@ -66,7 +66,7 @@ const Hero = () => {
             <div className="rounded-full w-72 h-72 md:w-96 md:h-96 border-8 border-white shadow-xl overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-b from-custom-purple/20 to-transparent"></div>
               <img 
-                src="https://media-hosting.imagekit.io/19118f06f3714154/ppl.jpg?Expires=1839567337&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=dVtS~jCvPhm~GFHMoiWjFjp425657i7TB~ViAe6EGN6954f9~~z8i7F6vBFPa2REjwe8vyHOVraxA5PzumDM36GM3e~fc~xHhqxns0-exQrt1hAdlXzwJbGufwFx8xZ57Bb2k14BL6wlBBDJWQYRTcl7mQuzdkyqMtLdtz3f5WV0Rh1SBBF9XeOJCdRYg1pyt~FOM0FG84CzLJBOKZ4RLLKOcOtFicDbLYDq5GPgRMywHLJ8i7q197r-cEjrDPOMC92CK8EmuLTL8-ZnNglB7HgqlqZP6mYVb8gbxuygtJiohpJRpEuJUGLa2by7qUn3ellz3NaDdDCO2LJGrIseQQ__" 
+                src="/images/new-profile-photo.jpg" 
                 alt="Saketh Mothe" 
                 className="w-full h-full object-cover"
               />
