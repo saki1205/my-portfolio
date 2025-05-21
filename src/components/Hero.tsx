@@ -66,7 +66,7 @@ const Hero = () => {
             <div className="rounded-full w-72 h-72 md:w-96 md:h-96 border-8 border-white shadow-xl overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-b from-custom-purple/20 to-transparent"></div>
               <img 
-                src="/images/new-profile-photo.jpg" 
+                src="/images/ppl.jpg" 
                 alt="Saketh Mothe" 
                 className="w-full h-full object-cover"
               />
