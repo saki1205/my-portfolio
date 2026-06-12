@@ -1,76 +1,28 @@
-
 import React from 'react';
 import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-
+  const top = () => window.scrollTo({ top: 0, behavior: 'smooth' });
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <a href="#" className="text-custom-lightPurple font-heading font-bold text-2xl">
-              Saketh<span className="text-white">.dev</span>
+    <footer className="relative border-t border-white/5 py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div>
+            <a href="#home" className="font-display font-bold text-lg">
+              <span className="gradient-text">saketh</span><span className="text-white/60">.dev</span>
             </a>
-            <p className="mt-2 text-gray-400 max-w-md">
-              Web developer specializing in responsive websites and web applications using MERN stack.
-            </p>
+            <p className="text-sm text-white/50 mt-2 max-w-md">AI Engineer & Full Stack Developer — building products that solve real problems.</p>
           </div>
-          
-          <div className="flex flex-col items-center md:items-end">
-            <div className="flex space-x-4 mb-4">
-              <a 
-                href="https://github.com/sakethmothe" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-custom-lightPurple transition-colors"
-              >
-                <Github size={20} />
-              </a>
-              <a 
-                href="https://linkedin.com/in/SakethMothe" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-custom-lightPurple transition-colors"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a 
-                href="mailto:saketh2005mothe@gmail.com" 
-                className="text-gray-400 hover:text-custom-lightPurple transition-colors"
-              >
-                <Mail size={20} />
-              </a>
-            </div>
-            
-            <button 
-              onClick={scrollToTop}
-              className="bg-custom-purple hover:bg-custom-darkPurple text-white p-3 rounded-full transition-colors flex items-center justify-center"
-            >
-              <ArrowUp size={20} />
-            </button>
+          <div className="flex items-center gap-3">
+            <a href="https://github.com/saki1205" target="_blank" rel="noreferrer" aria-label="GitHub" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-neon-mint hover:border-neon-mint/40 transition"><Github size={16} /></a>
+            <a href="https://linkedin.com/in/saketh-mothe" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-neon-blue hover:border-neon-blue/40 transition"><Linkedin size={16} /></a>
+            <a href="mailto:saketh2005mothe@gmail.com" aria-label="Email" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-neon-violet hover:border-neon-violet/40 transition"><Mail size={16} /></a>
+            <button onClick={top} aria-label="Back to top" className="ml-2 w-10 h-10 rounded-full bg-gradient-to-br from-neon-mint to-neon-blue text-black flex items-center justify-center hover:scale-105 transition"><ArrowUp size={16} /></button>
           </div>
         </div>
-        
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Saketh Mothe. All rights reserved.
-          </p>
-          
-          <div className="mt-4 md:mt-0">
-            <ul className="flex flex-wrap justify-center md:justify-end space-x-4 text-sm text-gray-400">
-              <li><a href="#about" className="hover:text-custom-lightPurple transition-colors">About</a></li>
-              <li><a href="#skills" className="hover:text-custom-lightPurple transition-colors">Skills</a></li>
-              <li><a href="#projects" className="hover:text-custom-lightPurple transition-colors">Projects</a></li>
-              <li><a href="#contact" className="hover:text-custom-lightPurple transition-colors">Contact</a></li>
-            </ul>
-          </div>
+        <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-white/45">
+          <p>© {new Date().getFullYear()} Saketh Mothe. Crafted with care.</p>
+          <p className="font-mono">Built with React + Tailwind</p>
         </div>
       </div>
     </footer>
