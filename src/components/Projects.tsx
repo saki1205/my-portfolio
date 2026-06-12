@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Github, ExternalLink, Search, Sparkles, Brain, Shield, Bot, Heart, Cpu, Wifi, Database, ScanLine } from 'lucide-react';
+import { Github, ExternalLink, Search, Sparkles, Brain, Shield, Bot, Heart, Cpu, Wifi, Database, ScanLine, type LucideIcon } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 type Project = {
@@ -7,7 +7,7 @@ type Project = {
   description: string;
   date?: string;
   tags: string[];
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: LucideIcon;
   github?: string;
   live?: string;
   featured?: boolean;
