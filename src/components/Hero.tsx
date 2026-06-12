@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
+import portrait from '../assets/saketh-portrait.jpg.asset.json';
 
 const ROLES = ['AI Engineer', 'Full Stack Developer', 'Problem Solver', 'LLM Builder'];
 
@@ -92,10 +93,10 @@ const Hero = () => {
           <div className="relative flex justify-center lg:justify-end animate-fade-up delay-200">
             <div className="relative">
               <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-neon-mint/40 via-neon-blue/30 to-neon-violet/40 blur-2xl opacity-70" />
-              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full p-[2px] bg-gradient-to-tr from-neon-mint via-neon-blue to-neon-violet animate-spin-slow">
+              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full p-[2px] bg-gradient-to-tr from-neon-mint via-neon-blue to-neon-violet">
                 <div className="w-full h-full rounded-full bg-ink-900 p-2">
                   <img
-                    src="/images/ppl.jpg"
+                    src={portrait.url}
                     alt="Saketh Mothe portrait"
                     className="w-full h-full rounded-full object-cover"
                   />
