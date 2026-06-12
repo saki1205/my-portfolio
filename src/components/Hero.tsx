@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
+import portrait from '../assets/saketh-portrait.jpg.asset.json';
 
 const ROLES = ['AI Engineer', 'Full Stack Developer', 'Problem Solver', 'LLM Builder'];
 
