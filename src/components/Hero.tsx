@@ -94,15 +94,12 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -inset-6 rounded-3xl bg-gradient-to-tr from-neon-mint/40 via-neon-blue/30 to-neon-violet/40 blur-2xl opacity-70" />
               <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-3xl p-[2px] bg-gradient-to-tr from-neon-mint via-neon-blue to-neon-violet">
-                <div className="w-full h-full rounded-3xl bg-ink-900 flex flex-col items-center justify-center gap-4 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-grid opacity-40" />
-                  <div className="relative font-display text-7xl font-bold gradient-text">SM</div>
-                  <div className="relative font-mono text-xs text-white/50 tracking-widest">SAKETH.MOTHE</div>
-                  <div className="relative flex gap-3 text-neon-mint/70">
-                    <Terminal size={18} />
-                    <Code2 size={18} />
-                    <Sparkles size={18} />
-                  </div>
+                <div className="w-full h-full rounded-3xl bg-ink-900 overflow-hidden">
+                  <img
+                    src={portrait.url}
+                    alt="Saketh Mothe portrait"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
