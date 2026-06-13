@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
-import portrait from '@/assets/saketh-portrait.jpg.asset.json';
+import portrait from '@/assets/saketh-portrait.jpg';
 
 const ROLES = ['AI Engineer', 'Full Stack Developer', 'Problem Solver', 'LLM Builder'];
 
@@ -96,7 +96,7 @@ const Hero = () => {
               <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-3xl p-[2px] bg-gradient-to-tr from-neon-mint via-neon-blue to-neon-violet">
                 <div className="w-full h-full rounded-3xl bg-ink-900 overflow-hidden">
                   <img
-                    src={portrait.url}
+                    src={portrait}
                     alt="Saketh Mothe portrait"
                     className="w-full h-full object-cover"
                   />
